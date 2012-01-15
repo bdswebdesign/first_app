@@ -1,0 +1,15 @@
+<% title "Scouts" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for scout in @scouts %>
+    <tr>
+      <td><%= scout.name %></td>
+      <td><%= link_to "Destroy", scout, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Scout", new_scout_path %></p>
